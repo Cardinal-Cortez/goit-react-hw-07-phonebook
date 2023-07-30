@@ -1,13 +1,13 @@
 import { InputAddNumber } from './styled'
 import PropTypes from "prop-types";
 
-export const InputNumber = ({handleNumberChange, number}) => {
+export const InputNumber = ({handleNumberChange, phone}) => {
 
     return (
         <div>
             <h2>Number</h2>
             <InputAddNumber onChange={handleNumberChange}
-                value={number}
+                value={phone}
                 type="tel"
                 name="number"
                 pattern= "^(\\+?[0-9.\\(\\)\\-\\s\]*)$"

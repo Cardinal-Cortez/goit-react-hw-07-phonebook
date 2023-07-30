@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
 import { deleteContacts } from "Redux/operations";
 
-export const Todo = ({ id, name, number}) => {
+export const Todo = ({ id, name, phone}) => {
   const dispatch = useDispatch();
 
   const handleDelete = () => {
@@ -14,7 +14,7 @@ export const Todo = ({ id, name, number}) => {
     <ul>
       <Item>
         <Name>{name}</Name>
-        <Number>{number}</Number>
+        <Number>{phone}</Number>
         <ButtonDel onClick={handleDelete}>Delete</ButtonDel>
       </Item>
     </ul>

@@ -9,16 +9,9 @@ import { filters } from "Redux/selectors";
 
 export const ContactList = () => {
 
-  // const contacts = useSelector(selectContacts);
-  // const filter = useSelector(selectFilter);
-
   const dispatch = useDispatch();
     const filter = useSelector(filters);
-  // const filters = () => {
-  //   return contacts.filter((item) =>
-  //     item.name.toLowerCase().includes(filter.toLowerCase())
-  //   );
-  // }
+
   return (
     <List>
       {filter.map((item) => (

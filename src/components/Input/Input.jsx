@@ -5,8 +5,8 @@ import { InputNumber } from "components/InputNumber";
 import { Filter } from "components/ButtonAdd";
 import { ContactList } from "components/ContactList"; 
 import { useDispatch, useSelector } from "react-redux";
-import { selectContacts } from "Redux/selectors";
 import { addContacts } from "Redux/operations";
+import { selectContacts } from "Redux/selectors";
 
 export const Input = () => {
 
@@ -16,7 +16,7 @@ export const Input = () => {
   console.log(contacts);
   
   const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
+  const [phone, setNumber] = useState('');
 
   const handleNumberChange = (e) => {
     setNumber(e.target.value);
@@ -38,7 +38,7 @@ const handleSubmit = (e) => {
     return;
   }
 
-  dispatch(addContacts({name, number}));
+  dispatch(addContacts(name, phone));
   setName('');
   setNumber('');
 };
@@ -51,7 +51,7 @@ const handleSubmit = (e) => {
         <InputName handleNameChange={handleNameChange} name={name} />
         <InputNumber
           handleNumberChange={handleNumberChange}
-          number={number}
+          number={phone}
         />
         <AddContact type="submit">Add Contact</AddContact>
       </ContactForm>

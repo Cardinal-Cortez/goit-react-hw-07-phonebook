@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchContacts } from "../Redux/operations";
 import { selectError, selectIsLoading } from "../Redux/selectors";
 
-export const App = ({ filter }) => {
+export const App = () => {
 
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
@@ -18,7 +18,7 @@ export const App = ({ filter }) => {
     <>
       {isLoading && !error && <b>Request in progress...</b>}
       {error && <p>{error}</p>}
-      <Input filter={filter} />
+      <Input />
     </>
   );
 };
