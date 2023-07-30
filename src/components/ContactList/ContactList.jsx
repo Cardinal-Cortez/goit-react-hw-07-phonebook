@@ -1,14 +1,15 @@
 import { Todo } from "components/Todo"; 
 import { useDispatch, useSelector } from "react-redux";
-import { deleteContact } from "Redux/contactsReducer";
+import { deleteContacts } from "Redux/operations";
 import { List } from "./styled";
+import { selectContacts, selectFilter } from "Redux/selectors";
 import PropTypes from "prop-types";
 
 
 export const ContactList = () => {
 
-  const contacts = useSelector(state => state.contacts.data);
-  const filter = useSelector(state => state.filter);
+  const contacts = useSelector(selectContacts);
+  const filter = useSelector(selectFilter);
 
   const dispatch = useDispatch();
   
@@ -24,7 +25,7 @@ export const ContactList = () => {
         <Todo
           {...item}
           key={item.id}
-          onDelete={() => dispatch(deleteContact(item.id))}
+          onDelete={() => dispatch(deleteContacts(item.id))}
         />
       ))}
     </List>

@@ -1,13 +1,13 @@
 import { Number, Item, Name, ButtonDel } from "./styled";
 import PropTypes from "prop-types";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "Redux/contactsReducer";
+import { deleteContacts } from "Redux/operations";
 
 export const Todo = ({ id, name, number}) => {
   const dispatch = useDispatch();
 
   const handleDelete = () => {
-    dispatch(deleteContact(id));
+    dispatch(deleteContacts(id));
   };
 
   return (
