@@ -2,26 +2,26 @@ import { Todo } from "components/Todo";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteContacts } from "Redux/operations";
 import { List } from "./styled";
-import { selectContacts, selectFilter } from "Redux/selectors";
+// import { filters, selectContacts, selectFilter } from "Redux/selectors";
 import PropTypes from "prop-types";
+import { filters } from "Redux/selectors";
 
 
 export const ContactList = () => {
 
-  const contacts = useSelector(selectContacts);
-  const filter = useSelector(selectFilter);
+  // const contacts = useSelector(selectContacts);
+  // const filter = useSelector(selectFilter);
 
   const dispatch = useDispatch();
-  
-  const filters = () => {
-    
-    return contacts.filter((item) =>
-      item.name.toLowerCase().includes(filter.toLowerCase())
-    );
-  }
+    const filter = useSelector(filters);
+  // const filters = () => {
+  //   return contacts.filter((item) =>
+  //     item.name.toLowerCase().includes(filter.toLowerCase())
+  //   );
+  // }
   return (
     <List>
-      {filters().map((item) => (
+      {filter.map((item) => (
         <Todo
           {...item}
           key={item.id}

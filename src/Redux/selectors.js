@@ -8,6 +8,15 @@ export const selectError = state => state.contacts.error;
 
 export const selectFilter = state => state.filters;
 
+export const filters = (state) => {
+    const contacts = selectContacts(state);
+    const filter = selectFilter(state);
+    
+    return contacts.filter((item) =>
+      item.name.toLowerCase().includes(filter.toLowerCase())
+    );
+  }
+
 // export const selectContactsBook = (state) => {
 //   const contacts = selectContacts(state);
 //   return contacts.reduce((prepare, { name, number }) => {
