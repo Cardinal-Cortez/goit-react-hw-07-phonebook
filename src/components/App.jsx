@@ -18,7 +18,7 @@ export const App = () => {
     <>
       {isLoading && !error && <b>Request in progress...</b>}
       {error && <p>{error}</p>}
-      <Input />
+      {!error && <Input />}
     </>
   );
 };
