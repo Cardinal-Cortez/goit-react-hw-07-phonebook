@@ -38,9 +38,10 @@ const handleSubmit = (e) => {
     return;
   }
 
-  dispatch(addContacts(name, phone));
+  dispatch(addContacts({name, phone}));
   setName('');
   setNumber('');
+  
 };
 
 

@@ -23,5 +23,5 @@ export const Todo = ({ id, name, phone}) => {
 
 Todo.propTypes = {
   name: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
+  phone: PropTypes.string.isRequired,
 };
