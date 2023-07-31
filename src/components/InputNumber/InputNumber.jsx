@@ -20,5 +20,5 @@ export const InputNumber = ({handleNumberChange, phone}) => {
 
 InputNumber.propTypes = {
     handleNumberChange: PropTypes.func.isRequired,
-    number: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
 };
