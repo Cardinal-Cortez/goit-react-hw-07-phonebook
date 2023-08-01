@@ -2,7 +2,6 @@ import { Todo } from "components/Todo";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteContacts } from "Redux/operations";
 import { List } from "./styled";
-// import { filters, selectContacts, selectFilter } from "Redux/selectors";
 import PropTypes from "prop-types";
 import { filters } from "Redux/selectors";
 

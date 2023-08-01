@@ -9,7 +9,7 @@ export const InputNumber = ({handleNumberChange, phone}) => {
             <InputAddNumber onChange={handleNumberChange}
                 value={phone}
                 type="tel"
-                name="number"
+                name="phone"
                 pattern= "^(\\+?[0-9.\\(\\)\\-\\s\]*)$"
                 title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                 required

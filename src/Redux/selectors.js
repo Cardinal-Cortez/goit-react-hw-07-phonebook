@@ -1,5 +1,3 @@
-// import { nanoid } from "@reduxjs/toolkit";
-
 export const selectContacts = state => state.contacts.data;
 
 export const selectIsLoading = state => state.contacts.isLoading;
@@ -16,16 +14,3 @@ export const filters = (state) => {
       item.name.toLowerCase().includes(filter.toLowerCase())
     );
   }
-
-// export const selectContactsBook = (state) => {
-//   const contacts = selectContacts(state);
-//   return contacts.reduce((prepare, { name, number }) => {
-//     prepare.push({
-//       id: nanoid(),
-//       name,
-//       number,
-//     });
-//     return prepare;
-//   }, []);
-// };
-
